@@ -1,0 +1,63 @@
+<!doctype html>
+<!-- AI citation: drafted with OpenAI Codex; applies to this document. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Look up the latest available weather observation for a city in Kazakhstan.">
+  <title>Kazakhstan Weather Watch</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="weather-app">
+    <header class="introduction">
+      <h1>Kazakhstan<br class="title-break"> Weather Watch</h1>
+      <p>Look up the latest available weather observation for a city in Kazakhstan.</p>
+    </header>
+
+    <div class="workspace">
+      <section class="panel search-panel" aria-labelledby="search-heading">
+        <h2 id="search-heading">City search</h2>
+        <form id="city-form">
+          <label for="city">City</label>
+          <input id="city" name="city" type="text" placeholder="e.g. Astana" required>
+          <button type="submit">Check weather</button>
+        </form>
+
+        <div id="submission" class="submission" hidden>
+          <span>Submitted city</span>
+          <output id="city-echo" form="city-form" for="city"></output>
+        </div>
+      </section>
+
+      <section class="panel results-panel" aria-labelledby="results-heading">
+        <h2 id="results-heading">Weather snapshot</h2>
+        <p id="lookup-status" class="status" role="status">No city selected.</p>
+
+        <div id="weather-details" hidden>
+          <div class="observation">
+            <h3 id="observed-city"></h3>
+            <time id="observation-time"></time>
+          </div>
+          <dl class="metrics">
+            <div class="metric" id="temperature">
+              <dt>Temperature</dt>
+              <dd><span id="temperature-value"></span><span class="unit">°C</span></dd>
+            </div>
+            <div class="metric">
+              <dt>Humidity</dt>
+              <dd><span id="humidity-value"></span><span class="unit">%</span></dd>
+            </div>
+            <div class="metric">
+              <dt>Wind</dt>
+              <dd><span id="wind-value"></span><span class="unit">km/h</span></dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </div>
+    <footer class="credits"><a href="https://open-meteo.com/">Weather data by Open-Meteo</a> · AI-assisted draft with OpenAI Codex.</footer>
+  </main>
+</body>
+</html>
