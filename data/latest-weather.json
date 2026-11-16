@@ -1,0 +1,16 @@
+[
+  {
+    "city": "Astana",
+    "observed_at": "2026-11-16T11:00:00Z",
+    "temperature_c": -1.7,
+    "humidity_pct": 71.0,
+    "wind_speed_kmh": 6.3
+  },
+  {
+    "city": "Almaty",
+    "observed_at": "2026-11-16T11:00:00Z",
+    "temperature_c": -2.5,
+    "humidity_pct": 88.0,
+    "wind_speed_kmh": 4.1
+  }
+]
